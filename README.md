@@ -87,3 +87,13 @@ Deployment details are in the [setup guide](website/setup.md#security-notes).
 ## License
 
 AGPL-3.0-or-later -- see [LICENSE](LICENSE) and [ACKNOWLEDGMENTS.md](ACKNOWLEDGMENTS.md).
+
+### Local Development (no Docker)
+
+If you prefer to run the application directly on your machine instead of using the provided Docker Compose stack, you can start it with a simple Uvicorn command.
+
+```bash
+python -m uvicorn app:app --host 127.0.0.1 --port 3000 --reload
+```
+
+The `--reload` flag automatically restarts the server when you modify source files, which is handy during development.
